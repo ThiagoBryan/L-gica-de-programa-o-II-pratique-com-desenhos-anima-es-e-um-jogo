@@ -1,0 +1,35 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas'); // para ter acesso ao Canvas
+    var pincel = tela.getContext('2d'); //para escrever em 2d
+    
+
+    pincel.fillStyle = 'lightgrey'; // cor do canvas
+      //coordenadas x, y   tamanho do retangulo
+    pincel.fillRect(0, 0, 600, 400); 
+    
+    // para preencher o rentangulo do canvas
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400)
+
+    pincel.fillStyle = 'yellow'; // para dar a cor
+    pincel.beginPath(); // para comecar o caminho onde o pincel vai comecar o caminho
+    pincel.moveTo(300, 200);  // comeca o desenho do triangulo no caso
+    pincel.lineTo(200, 400);  // marca os pontos 
+    pincel.lineTo(400, 400);  // para depois se ligarem
+    pincel.fill();  // preenche o desenho
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14); // para desenhar circulo
+    pincel.fill();
+
+
+
+
+</script>

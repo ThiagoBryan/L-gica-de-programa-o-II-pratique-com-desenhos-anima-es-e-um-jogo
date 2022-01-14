@@ -1,0 +1,22 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var lapis = tela.getContext("2d");
+
+function desenhaTriangulo (x1, y1, x2, y2, cor) {
+
+    lapis.fillStyle = cor;
+    lapis.beginPath();
+    lapis.moveTo(x1, y1);
+    lapis.lineTo(x2, y2);
+    lapis.lineTo(x1, y2);
+    lapis.fill();
+}
+
+desenhaTriangulo(50, 50, 400, 400, "black");
+desenhaTriangulo(100, 175, 275, 350, "white");
+desenhaTriangulo(115, 220, 225, 330, "black");
+
+</script>
